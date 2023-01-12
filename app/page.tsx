@@ -15,7 +15,7 @@ function Home() {
         </div>
             
         <div className='flex flex-col w-[90%] lg:w-3/4 mx-auto  pb-8'>
-            <div className='min-h-screen flex flex-col gap-10'>
+            <div className='min-h-screen flex flex-col gap-10 max-w-full overflow-hidden'>
                 <StickyHeader>About</StickyHeader>
                 <div className={`text-2xl grid grid-cols-2`}>
                 <div className='flex flex-col gap-2 m-auto'>
