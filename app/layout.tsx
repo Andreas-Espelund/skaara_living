@@ -10,8 +10,8 @@ export default function RootLayout({
     <html>
       <head />
       <body className='h-[100vh] flex bg-zinc-900 text-white'>
-        {children}  
         <Header/>
+        {children}  
         </body>
     </html>
   )
