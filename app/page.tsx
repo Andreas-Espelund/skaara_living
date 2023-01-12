@@ -15,29 +15,27 @@ function Home() {
         </div>
             
         <div className='flex flex-col w-[90%] lg:w-3/4 mx-auto  pb-8'>
-            <div className='min-h-screen flex flex-col gap-10 max-w-full overflow-hidden'>
+            <div className='min-h-screen flex flex-col gap-10 max-w-[100vw]'>
                 <StickyHeader>About</StickyHeader>
-                <div className={`text-2xl grid grid-cols-2`}>
-                <div className='flex flex-col gap-2 m-auto'>
-                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nihil pariatur alias commodi magnam quas delectus illum repellat? Dolor, modi dignissimos ratione voluptatum libero commodi sequi eaque culpa ut illo!</p>
-                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nihil pariatur alias commodi magnam quas delectus illum repellat? Dolor, modi dignissimos ratione voluptatum libero commodi sequi eaque culpa ut illo!</p>
-                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nihil pariatur alias commodi magnam quas delectus illum repellat? Dolor, modi dignissimos ratione voluptatum libero commodi sequi eaque culpa ut illo!</p>
-
-                </div>
-                
-                <div className='h-[500px] relative ml-auto aspect-square rounded-full overflow-hidden   shadow-2xl bg-white'>
-                    <Image alt="" className='object-cover' src="https://images.squarespace-cdn.com/content/v1/5e20a2ecc3ec8b14a479723c/1601894951277-JCK8LZE1K6JEC6786ZK1/DSC_6738.jpg?" fill/>
-                </div>
+                <div className="text-2xl max-w-[100vw] grid grid-cols-1 lg:grid-cols-2 grid-rows-2 gap-10">
+                    <div className='flex flex-col justify-evenly gap-4 '>
+                        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nihil pariatur alias commodi magnam quas delectus illum repellat? Dolor, modi dignissimos ratione voluptatum libero commodi sequi eaque culpa ut illo!</p>
+                        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nihil pariatur alias commodi magnam quas delectus illum repellat? Dolor, modi dignissimos ratione voluptatum libero commodi sequi eaque culpa ut illo!</p>
+                    </div>
+                    
+                    <div className='relative mx-auto w-full lg:w-3/4 aspect-square rounded-full overflow-hidden shadow-2xl bg-white'>
+                        <Image alt="" className='object-cover' src="https://images.squarespace-cdn.com/content/v1/5e20a2ecc3ec8b14a479723c/1601894951277-JCK8LZE1K6JEC6786ZK1/DSC_6738.jpg?" fill/>
+                    </div>
                 </div>
 
             </div>
-            <div className='h-screen flex flex-col gap-10'>
-                <StickyHeader>Get in touch</StickyHeader>
+            <div className='min-h-screen flex flex-col gap-10'>
+                <StickyHeader>Contact</StickyHeader>
                 <ContactForm/>
             </div>
 
-            <div className='h-screen flex flex-col gap-10'>
-                <StickyHeader>Where?</StickyHeader>
+            <div className='min-h-screen flex flex-col gap-10'>
+                <StickyHeader>Location</StickyHeader>
                 <iframe src="https://snazzymaps.com/embed/452941" className='w-full h-3/4  rounded-2xl shadow-xl'/>
             </div>
 

@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className='h-[100vh] flex bg-zinc-900 text-white'>
+      <body className='h-[100vh] flex bg-zinc-900 text-white max-w-[100vw] overflow-x-hidden'>
         <Header/>
         {children}  
         </body>
