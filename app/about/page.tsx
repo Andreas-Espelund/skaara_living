@@ -10,16 +10,16 @@ function About() {
         animate={{
           rotate:[0, 90, 180, 270, 360],
           x:[-200, -100, 0, 100, 200],
-          borderRadius:[0,100,0, 100, 0]
+          borderRadius:[100,20,0, 20,100]
 
         }}
         transition={{repeat:Infinity, repeatType:'reverse', duration:3}}
-        className='w-[110px] aspect-square grid place-content-center  bg-primary text-black'
+        className='w-[110px] aspect-square grid place-content-center   text-black border-4 border-primary '
       >  
       <motion.p
         animate={{ rotate:[0, -90, -180, -270, -360]}}
         transition={{repeat:Infinity, repeatType:'reverse', duration:3}}
-        className="playfair text-4xl font-bold"
+        className="playfair text-6xl font-extrabold text-primary"
       >
         S
       </motion.p>
