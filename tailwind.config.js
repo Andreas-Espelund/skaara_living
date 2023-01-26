@@ -15,6 +15,10 @@ module.exports = {
       fontFamily: {
         "Josefin": ["Josefin Sans", ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage:{ 
+        'view' : "url('../public/view.jpg')"
+      }
+      
     },
   },
   plugins: [],

@@ -1,29 +1,18 @@
 'use client'
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
+import background from '../../public/view.jpg'
 function About() {
   return (
-    <div className='text-4xl h-[120vh] flex-1 grid place-content-center max-w-[100vw] overflow-hidden'>
-      
-      <motion.div
-        initial={{x:-200}}
-        animate={{
-          rotate:[0, 90, 180, 270, 360],
-          x:[-200, -100, 0, 100, 200],
-          borderRadius:[100,20,0, 20,100]
+    <div className='h-[101vh] flex-1 relative'>
+      <Image src={background} alt="" fill className='object-cover'/>
 
-        }}
-        transition={{repeat:Infinity, repeatType:'reverse', duration:3}}
-        className='w-[110px] aspect-square grid place-content-center   text-black border-4 border-primary '
-      >  
-      <motion.p
-        animate={{ rotate:[0, -90, -180, -270, -360]}}
-        transition={{repeat:Infinity, repeatType:'reverse', duration:3}}
-        className="playfair text-6xl font-extrabold text-primary"
-      >
-        S
-      </motion.p>
-      </motion.div>
+      <div className='absolute grid place-content-center w-full h-full'>
+        <div className="font-black bg-[url('/view.jpg')] bg-clip-text text-[4rem] lg:text-[22rem]  bg-center drop-shadow-xl p-10 text-black/10">
+          ABOUT
+        </div>
+      </div>
     </div>
   )
 }

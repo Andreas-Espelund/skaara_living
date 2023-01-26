@@ -2,8 +2,8 @@ import React from 'react'
 import StickyHeader from '../components/StickyHeader'
 import Image from 'next/image'
 import ContactForm from '../components/ContactForm'
-import background from '../public/background.png'
-
+import background from '../public/box.png'
+import view from '../public/view.jpg'
 
 
 function Home() {
@@ -24,7 +24,7 @@ function Home() {
                     </div>
                     
                     <div className='relative mx-auto w-full lg:w-3/4 aspect-square rounded-full overflow-hidden shadow-2xl bg-white'>
-                        <Image alt="" className='object-cover' src="https://images.squarespace-cdn.com/content/v1/5e20a2ecc3ec8b14a479723c/1601894951277-JCK8LZE1K6JEC6786ZK1/DSC_6738.jpg?" fill/>
+                        <Image alt="" className='object-cover' src={view} fill/>
                     </div>
                 </div>
 
