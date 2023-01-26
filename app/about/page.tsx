@@ -9,7 +9,7 @@ function About() {
       <Image src={background} alt="" fill className='object-cover'/>
 
       <div className='absolute grid place-content-center w-full h-full'>
-        <div className="font-black bg-[url('/view.jpg')] bg-clip-text text-[4rem] lg:text-[22rem]  bg-center drop-shadow-xl p-10 text-black/10">
+      <div className="font-black text-[4rem] lg:text-[22rem]  drop-shadow-xl text-white/60">
           ABOUT
         </div>
       </div>

@@ -14,7 +14,7 @@ function Contact() {
       <Image alt="" className='object-cover' src={background} fill/>
       
       <div className='absolute grid place-content-center w-full h-full'>
-        <div className="font-black bg-[url('/view.jpg')] bg-clip-text text-[4rem] drop-shadow-xl lg:text-[22rem] bg-center p-10 text-transparent">
+      <div className="font-black text-[4rem] lg:text-[22rem]  drop-shadow-xl text-white/60">
           CONTACT
         </div>
       </div>
