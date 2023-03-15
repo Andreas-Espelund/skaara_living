@@ -5,8 +5,12 @@ import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser';
 import Input from './Input'
 import Loader from './/Loader'
+const EJS_PUBLIC_KEY="WJ3R4JsWHDRY4XkxG"
+const EJS_SERVICE_ID="service_owyz0ui"
+const EJS_TEMPLATE_ID="template_dkkc2wk"
+
 function ContactForm() {
-    
+    var last = null
     const [loading, setLoading] = useState(false)
     const [msgData, setMsgData] = useState({
         firstname: '',
@@ -34,32 +38,24 @@ function ContactForm() {
         console.log("sending email...")
     }
 
-    const test = () => {
-        console.log("KEYS")
-        console.log(process.env.EJS_PUBLIC_KEY)
-        console.log(process.env.EJS_SERVICE_ID)
-        console.log(process.env.EJS_TEMPLATE_ID)
-    }
-
     const handleSubmit = (e) => {
         e.preventDefault()
-        setLoading(e => true)
+
         const data = formRef.current
-
-        emailjs.sendForm(EJS_SERVICE_ID, EJS_TEMPLATE_ID, formRef.current, EJS_PUBLIC_KEY)
         
-        
-        setLoading(e => false)
-    
-
+        if (verified(data)){
+            if (last != data){
+                emailjs.sendForm(EJS_SERVICE_ID, EJS_TEMPLATE_ID, data, EJS_PUBLIC_KEY)
+                last = data
+                sendEmail()
+                e.target.reset()
+            }
+            return
+        } else {
+            alert("Fill out all fields!")
+            console.log("ERROR! Invalid input to form!")
+        }
     }
-    test()
-
-    const handleChange = (e) => {
-        const {name, value} = e.target
-        setMsgData(previousState => ({...previousState,[name]:value}))
-    }
-
     return (
     <motion.div
         onSubmit={handleSubmit}
@@ -80,8 +76,8 @@ function ContactForm() {
                 Message
                 <textarea className=' resize-none p-4 outline-none border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800' rows={7} name="message"/>
             </label>
-            <input className='lg:col-span-2 text-center text-black w-full outline-none focus:scale-[102%] transition-all rounded-lg font-bold p-4 bg-primary' type='submit' value="Send"/>
-
+            <button className='lg:col-span-2 text-center text-black w-full outline-none active:scale-[98%] transition-all rounded-lg font-bold p-4 bg-primary' type='submit'>Send</button>
+            
             <Loader active={loading}/>
         </form>
 
