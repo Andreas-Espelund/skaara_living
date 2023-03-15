@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        primary:'#fde047'
+        primary:'#ffb700',
       },
       fontFamily: {
         "Josefin": ["Josefin Sans", ...defaultTheme.fontFamily.sans],

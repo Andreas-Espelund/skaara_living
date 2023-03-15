@@ -10,11 +10,10 @@ function Contact() {
   console.log(process.env.EJS_TEMPLATE_ID)
 
   return (
-    <div className='h-[101vh] flex-1 relative'>
+    <div className='flex-1 relative h-screen'>
       <Image alt="" className='object-cover' src={background} fill/>
-      
       <div className='absolute grid place-content-center w-full h-full'>
-      <div className="font-black text-[4rem] lg:text-[22rem]  drop-shadow-xl text-white/60">
+        <div className="font-black text-[4rem] lg:text-[22rem]  drop-shadow-xl text-white/60">
           CONTACT
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import '../styles/globals.css'
 export default function RootLayout({
   children,
@@ -9,10 +10,11 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className='h-[100vh] flex bg-zinc-900 text-white max-w-[100vw] overflow-x-hidden'>
+      <body className='min-h-[100vh] flex flex-col bg-zinc-900 text-white justify-between overflow-x-hidden'>
         <Header/>
         {children}  
-        </body>
+        <Footer/>
+      </body>
     </html>
   )
 }

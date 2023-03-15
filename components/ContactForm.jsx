@@ -3,7 +3,7 @@ import React from 'react'
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser';
-
+import Input from './Input'
 import Loader from './/Loader'
 function ContactForm() {
     
@@ -67,31 +67,22 @@ function ContactForm() {
         whileInView={{x:0, opacity:1}}
         transition={{duration:1}}
         viewport={{once:true}}
-        onClick={()=> setLoading(false)}
-        
+        onClick={()=> setLoading(false)} 
     >
-        <form className='grid gap-6 grid-cols-2 text-xl relative' ref={formRef} onSubmit={handleSubmit}>
-
-            <label htmlFor='email'> First name </label>
-            <label htmlFor='lastname'> Last name </label>
+        <form className='grid gap-6 text-xl relative' ref={formRef} onSubmit={handleSubmit}>
+            <Input label="First name" type="text" name="firstname"/>
+            <Input label="Last name" type="text" name="lastname"/>
+            <Input label="Email" type="email" name="email"/>
+            <Input label="Phone" type="number" name="phone"/>
+      
             
-            <input className=' p-4  outline-none box-border border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800' name="firstname" type="text"/>
-            <input className=' p-4 outline-none border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800' name="lastname" type="text"/>
-        
-        
-            <label htmlFor='email'> Email </label>
-            <label htmlFor='phone'> Phone number </label>
-            
-            <input className=' p-4 outline-none border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800' name="email" type="email"/>    
-            <input className=' p-4 outline-none border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800' name="phone" type="number"/>    
-            
+            <label className='lg:col-span-2 grid grid-flow-row gap-2'>
+                Message
+                <textarea className=' resize-none p-4 outline-none border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800' rows={7} name="message"/>
+            </label>
+            <input className='lg:col-span-2 text-center text-black w-full outline-none focus:scale-[102%] transition-all rounded-lg font-bold p-4 bg-primary' type='submit' value="Send"/>
 
-            <label htmlFor='message' className='col-span-2'> Message </label>
-            <textarea  className='col-span-2 resize-none p-4 outline-none border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800' rows={7} name="message"/>
-
-            <input className='text-center col-span-2 text-black w-full outline-none focus:scale-[102%] transition-all rounded-lg font-bold p-4 bg-primary' type='submit' value="Send"/>
-
-        <Loader active={loading}/>
+            <Loader active={loading}/>
         </form>
 
        
