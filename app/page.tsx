@@ -4,16 +4,28 @@ import Image from 'next/image'
 import ContactForm from '../components/ContactForm'
 import background from '../public/fake.jpg'
 import view from '../public/view.jpg'
-
+import Gallery from '../components/Gallery'
 
 function Home() {
+
+    const images = [
+        '/images/dag/DSC08803.jpg',
+        '/images/dag/DSC08790.jpg',
+        '/images/dag/DSC08778.jpg',
+        //'/images/dag/DSC08770.jpg', (vertical)
+        '/images/dag/DSC08765.jpg',
+        '/images/dag/DSC08759.jpg',
+        '/images/dag/DSC08732.jpg',
+        '/images/dag/DJI_0452.jpg',
+
+    ]
 
   return (
     <div className="flex-1 flex flex-col">            
         
         <div className='min-h-screen flex-1 relative'>
-            <div className="bg-gradient-to-t from-zinc-900 to-transparent flex h-40 w-full absolute bottom-0 z-50"></div>
-            <Image className='object-cover' fill alt="" src={background}/>
+            
+            <Gallery images={images}/>
         </div>
 
             
@@ -32,12 +44,12 @@ function Home() {
                 </div>
 
             </div>
-            <div className='min-h-screen flex flex-col gap-10'>
+            <div className='min-h-screen flex flex-col gap-10' id="contact">
                 <StickyHeader>Contact</StickyHeader>
                 <ContactForm/>
             </div>
 
-            <div className='min-h-screen flex flex-col gap-10'>
+            <div className='min-h-screen flex flex-col gap-10' id="location">
                 <StickyHeader>Location</StickyHeader>
                 <div className='flex w-full h-full justify-end'>
                     <iframe src="https://snazzymaps.com/embed/452941" className='w-full flex-1 h-fit lg:h-[800px] rounded-2xl shadow-xl'/>

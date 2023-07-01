@@ -6,7 +6,7 @@ export default function Footer() {
         <div className='flex flex-col gap-6 w-3/4 m-auto'>
             <p>Skaara living AS</p>
             <p>post@skaaraliving.com</p>
-            <p>+47 999 99 999</p>
+            <p>+47 951 91 784</p>
             <p>Copyright © 2023</p>
         </div>
     </div>
