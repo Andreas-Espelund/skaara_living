@@ -10,14 +10,10 @@ function Home() {
 
     const images = [
         '/images/dag/DSC08803.jpg',
-        '/images/dag/DSC08790.jpg',
         '/images/dag/DSC08778.jpg',
-        //'/images/dag/DSC08770.jpg', (vertical)
-        '/images/dag/DSC08765.jpg',
-        '/images/dag/DSC08759.jpg',
-        '/images/dag/DSC08732.jpg',
-        '/images/dag/DJI_0452.jpg',
-
+        '/images/kveld/DSC08663-3.jpg',
+        '/images/kveld/DSC08623-2.jpg',
+        '/images/kveld/DSC08704-3.jpg',
     ]
 
   return (
