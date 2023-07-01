@@ -2,7 +2,7 @@ import React from 'react'
 import StickyHeader from '../components/StickyHeader'
 import Image from 'next/image'
 import ContactForm from '../components/ContactForm'
-import background from '../public/hero.png'
+import background from '../public/fake.jpg'
 import view from '../public/view.jpg'
 
 

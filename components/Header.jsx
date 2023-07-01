@@ -10,10 +10,13 @@ function Header() {
           <Link className='hidden hover:scale-110 playfair transition-all outline-primary' href="/">HOME</Link>
           <Link className='hidden hover:scale-110 playfair transition-all outline-primary' href="/about">ABOUT</Link>
           <Link className='hidden hover:scale-110 playfair transition-all outline-primary' href="/contact">CONTACT</Link>
-          <Link className=' hover:scale-110 transition-all box-border outline-none bg-primary rounded-full text-black px-8 py-3 ' href="/info">Book now</Link>
+          <Link className=' hover:scale-110 transition-all box-border outline-none bg-primary rounded-full text-black px-8 py-3 ' href="https://airbnb.no/h/skaaraliving" target="_blank">Book now</Link>
       </nav>
       <div className='lg:hidden'>
-        <Hamburger/>
+        <div className='hidden'>
+          <Hamburger/>
+        </div>
+        <Link className=' hover:scale-110 transition-all box-border outline-none bg-primary rounded-full text-black px-8 py-3 ' href="https://airbnb.no/h/skaaraliving" target="_blank">Book now</Link>
       </div>
     </div>
 
