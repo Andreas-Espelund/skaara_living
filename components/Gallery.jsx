@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
-import Image from 'next/image';
+
 export default function Gallery({ images }) {
   const [current, setCurrent] = useState(0);
   const length = images.length;
@@ -33,7 +33,7 @@ export default function Gallery({ images }) {
         return (
           <div className={index === current ? 'opacity-1 duration-1000 transition-opacity w-full h-full' : 'opacity-0 duration-1000 transition-opacity'} key={index}>
             {index === current && (
-              <Image src={image} alt='cabin view' className='object-cover w-full h-full' width={3600} height={2400} />
+              <img src={image} alt='cabin view' className='object-cover w-full h-full'/>
             )}
           </div>
         );
