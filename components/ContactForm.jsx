@@ -65,7 +65,7 @@ function ContactForm() {
         viewport={{once:true}}
         onClick={()=> setLoading(false)} 
     >
-        <form className='grid gap-6 text-xl relative' ref={formRef} onSubmit={handleSubmit}>
+        <form className='grid gap-4 lg:gap-6 text-xl relative' ref={formRef} onSubmit={handleSubmit}>
             <Input label="First name" type="text" name="firstname"/>
             <Input label="Last name" type="text" name="lastname"/>
             <Input label="Email" type="email" name="email"/>
@@ -74,7 +74,7 @@ function ContactForm() {
             
             <label className='lg:col-span-2 grid grid-flow-row gap-2'>
                 Message
-                <textarea className=' resize-none p-4 outline-none border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800' rows={7} name="message"/>
+                <textarea className=' resize-none p-4 outline-none border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800' rows={5} name="message"/>
             </label>
             <button className='lg:col-span-2 text-center text-black w-full outline-none active:scale-[98%] transition-all rounded-lg font-bold p-4 bg-primary' type='submit'>Send</button>
             

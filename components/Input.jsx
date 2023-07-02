@@ -7,7 +7,7 @@ export default function Input({label, name, type}) {
         <input
         name={name}
         type={type}
-        className="p-4 outline-none  box-border border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800"
+        className="p-2 lg:p-4 outline-none  box-border border-2 border-transparent focus:border-primary rounded-lg bg-zinc-800"
         />
     </label>
   )

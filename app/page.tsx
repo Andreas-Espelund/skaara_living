@@ -20,27 +20,11 @@ function Home() {
     <div className="flex-1 flex flex-col">            
         
         <div className='min-h-screen flex-1 relative'>
-            
             <Gallery images={images}/>
         </div>
 
-            
-        <div className='flex flex-col w-[90%] lg:w-3/4 mx-auto  pb-8'>
-            <div className='min-h-screen flex flex-col gap-10 max-w-[100vw] hidden'>
-                <StickyHeader>About</StickyHeader>
-                <div className="text-2xl max-w-[100vw] grid grid-cols-1 lg:grid-cols-2 grid-rows-2 gap-10">
-                    <div className='flex flex-col justify-evenly gap-4 '>
-                        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nihil pariatur alias commodi magnam quas delectus illum repellat? Dolor, modi dignissimos ratione voluptatum libero commodi sequi eaque culpa ut illo!</p>
-                        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nihil pariatur alias commodi magnam quas delectus illum repellat? Dolor, modi dignissimos ratione voluptatum libero commodi sequi eaque culpa ut illo!</p>
-                    </div>
-                    
-                    <div className='relative mx-auto w-full lg:w-3/4 aspect-square rounded-full overflow-hidden shadow-2xl bg-white'>
-                        <Image alt="" className='object-cover' src={view} fill/>
-                    </div>
-                </div>
-
-            </div>
-            <div className='min-h-screen flex flex-col gap-10' id="contact">
+        <div className='flex flex-col w-[90%] lg:w-3/4 mx-auto  pb-8'>            
+            <div className='min-h-screen flex flex-col gap-10 justify-center' id="contact">
                 <StickyHeader>Contact</StickyHeader>
                 <ContactForm/>
             </div>
@@ -48,7 +32,7 @@ function Home() {
             <div className='min-h-screen flex flex-col gap-10' id="location">
                 <StickyHeader>Location</StickyHeader>
                 <div className='flex w-full h-full justify-end'>
-                    <iframe src="https://snazzymaps.com/embed/452941" className='w-full flex-1 h-fit lg:h-[800px] rounded-2xl shadow-xl'/>
+                    <iframe src="https://snazzymaps.com/embed/452941" className='w-full flex-1 h-[80vh]  rounded-2xl shadow-xl'/>
                     
                     <a className='absolute m-4 bg-primary text-black p-4 w-fit rounded-full shadow-md hover:scale-105 hover:shadow-lg transition-all active:scale-95 active:shadow-none' target="_blank" href="https://www.google.com/maps/dir/''/Fv698+7,+6778+Lote/">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
@@ -58,11 +42,7 @@ function Home() {
                     </a>
                 </div>
             </div>
-
         </div>
-
-        
-
     </div>
   )
 }
