@@ -15,7 +15,6 @@ export default function Loader({active}) {
             transition={{repeat:Infinity, repeatType:'reverse', duration:3}}
             className='w-[11vw] aspect-square grid place-content-center rounded-full   text-black bg-primary shadow-xl overflow-hidden'
         />
-            
     </div>
   )
 }

@@ -3,11 +3,10 @@ import React from 'react'
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser';
+
+
 import Input from './Input'
 import Loader from './/Loader'
-const EJS_PUBLIC_KEY="WJ3R4JsWHDRY4XkxG"
-const EJS_SERVICE_ID="service_owyz0ui"
-const EJS_TEMPLATE_ID="template_dkkc2wk"
 
 function ContactForm() {
     var last = null
@@ -45,7 +44,7 @@ function ContactForm() {
         
         if (verified(data)){
             if (last != data){
-                emailjs.sendForm(EJS_SERVICE_ID, EJS_TEMPLATE_ID, data, EJS_PUBLIC_KEY)
+                emailjs.sendForm(process.env.EJS_SERVICE_ID, process.env.EJS_TEMPLATE_ID, data, process.env.EJS_PUBLIC_KEY)
                 last = data
                 sendEmail()
                 e.target.reset()
