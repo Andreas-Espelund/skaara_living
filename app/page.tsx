@@ -1,5 +1,5 @@
 import React from 'react'
-import { StickyHeader, ContactForm, Gallery, Scroller, MapView } from '../components';
+import {StickyHeader, ContactForm, Gallery, Scroller, MapView, Header} from '../components';
 
 export default function Home() {
 
@@ -13,6 +13,7 @@ export default function Home() {
 
   return (
     <div className="flex-1 flex flex-col">
+        <Header/>
         <div className='min-h-screen flex-1 relative' id="gallery">
             <Gallery images={images}/>
         </div>
@@ -21,7 +22,6 @@ export default function Home() {
                 <StickyHeader>Contact</StickyHeader>
                 <ContactForm/>
             </div>
-
             <div className='min-h-screen flex flex-col gap-10' id="location">
                 <StickyHeader>Location</StickyHeader>
                <MapView/>
