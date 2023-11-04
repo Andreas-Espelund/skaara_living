@@ -1,3 +1,4 @@
+'use client'
 import CardView from "../../components/CardView";
 
 export default function Cabins() {

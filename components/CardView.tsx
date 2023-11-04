@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
@@ -12,10 +13,10 @@ export default function CardView(props: CardViewProps) {
     const { title, src, href } = props;
 
     return (
-        <a className="text-black text-4xl hover:scale-[102%] transition-all" href={href} target="_blank" rel="noreferrer">
+        <a className="text-black text-4xl flex hover:scale-[102%] transition-all aspect-[4/3]" href={href} target="_blank" rel="noreferrer">
             <div className="relative">
-                <img src={src} alt={title} className="object-cover object-center aspect-[4/3] rounded-lg" />
-                <p className="text-white  text-4xl font-bold absolute inset-0 flex items-center justify-center">{title}</p>
+                <Image src={src} alt={title} width={1000} height={200} className="min-h-full min-w-full rounded-xl"/>
+                <p className="text-white text-4xl font-bold absolute inset-0 flex items-center justify-center">{title}</p>
             </div>
         </a>
     )
