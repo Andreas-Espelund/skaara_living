@@ -28,7 +28,7 @@ export default function Cabins() {
             <div className="flex flex-col gap-10 rounded-xl">
                 <h2 className="text-4xl">Get the holiday gift of the year!</h2>
                 
-                <a className='px-8 text-black font-medium text-xl rounded-lg bg-primary w-fit py-4 hidden md:block hover:scale-105 transition-all outline-primary' href="https://shop.skaaraliving.com/" target={"_blank"}>Buy a gift card</a>
+                <a className='px-8 text-black font-medium text-xl rounded-lg bg-primary w-fit py-4 hidden md:block hover:scale-105 transition-all outline-primary' href="https://shop.skaaraliving.com/" target="_blank" rel="noreferrer">Buy a gift card</a>
             </div>
         </div>
     )
