@@ -5,7 +5,7 @@ export default function Cabins() {
 
 
     return (
-        <div className="h-screen p-10 grid playfair ">
+        <div className="min-h-screen p-10 gap-10 grid playfair ">
             <a href={"/"} className={"hover:scale-125 w-fit h-fit p-2 rounded-full hover:bg-primary hover:text-black transition-all"}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -27,8 +27,7 @@ export default function Cabins() {
 
             <div className="flex flex-col gap-10 rounded-xl">
                 <h2 className="text-4xl">Get the holiday gift of the year!</h2>
-                
-                <a className='px-8 text-black font-medium text-xl rounded-lg bg-primary w-fit py-4 hidden md:block hover:scale-105 transition-all outline-primary' href="https://shop.skaaraliving.com/" target="_blank" rel="noreferrer">Buy a gift card</a>
+                <a className='px-8 text-black font-medium text-xl rounded-lg bg-primary w-fit py-4 hover:scale-105 transition-all outline-primary' href="https://shop.skaaraliving.com/" target="_blank" rel="noreferrer">Buy a gift card</a>
             </div>
         </div>
     )
